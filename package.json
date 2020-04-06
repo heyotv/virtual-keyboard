@@ -1,0 +1,25 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "eslint script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyotv/virtual-keyboard.git"
+  },
+  "author": "Vitali Tumilovich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heyotv/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/heyotv/virtual-keyboard#readme"
+}
