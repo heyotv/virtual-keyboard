@@ -100,14 +100,15 @@ class Keyboard {
     document.body.innerHTML = '';
     this.settings.wrapper = document.createElement('div');
     this.settings.wrapper.classList.add('wrapper');
-    this.settings.wrapper.innerHTML = `<textarea class="text" cols="30" rows="10" autofocus></textarea>
+    this.settings.wrapper.innerHTML = `<textarea class="text" cols="30" rows="5" autofocus></textarea>
     <div class="keyboard">
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
       <div class="row"></div>
-    </div>`;
+    </div>
+    <p class="info">to change the language press shift + ctrl</p>`;
     document.body.prepend(this.settings.wrapper);
 
     this.settings.keyboard = document.querySelector('.keyboard');
@@ -296,16 +297,17 @@ class Keyboard {
   }
 
   keyDown = (event) => {
+    console.log(event)
     this.settings.buttons.forEach((button) => {
       if (button.getAttribute('data') === event.code) {
         button.classList.add('button-active');      
       }
     });
-    if (event.shiftKey && event.altKey) {
+    if (event.shiftKey && event.ctrlKey) {
       this.switchLanguange();
     }
     
-    if (event.shiftKey && !event.altKey) {
+    if (event.shiftKey && !event.ctrlKey) {
       this.settings.isShift = true;
       this.addButtonsNames();
     }
